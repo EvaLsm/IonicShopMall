@@ -1,0 +1,210 @@
+<ion-view id="home" view-title="首页" cache-view="false">
+  <!-- 头部 -->
+  <div id="headerBar" class="headerBar">
+    <div id="headerBar-bg"></div>
+    <div class="headerBar-logo">
+      <i>微购</i>
+    </div>
+    <a class="headerBar-search" ng-href="javascript:;">
+      <span></span>
+      <div>
+        <input maxlength="20" autocomplete="true" value="美妆1元起 独家放价"/>
+      </div>
+    </a>
+    <a class="headerBar-login" ng-href="javascript:;">
+        <span>
+            登录
+        </span>
+    </a>
+  </div>
+  <!-- 内容 -->
+  <ion-content id="homeContent" class="scroll-content" scroll="false">
+    <!-- 头部轮播图部分 -->
+    <section class="header-swiper">
+      <div class="swiper-container" id="topSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" ng-repeat="img in imgs">
+            <a href="javascript:;">
+              <img src="{{imgDomain}}{{img}}" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- 功能导航 -->
+    <nav id="nav" class="clearfix">
+      <ul>
+        <li ui-sref="tab.classify">
+          <a href="javascript:;">
+            <img ng-src="img/home/nav0.png" alt="">
+            <h4>分类查询</h4>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <img ng-src="img/home/nav1.png" alt="">
+            <h4>物流查询</h4></a>
+        </li>
+        <li ui-sref="tab.cart">
+          <a href="javascript:;">
+            <img ng-src="img/home/nav2.png" alt="">
+            <h4>购物车</h4>
+          </a>
+        </li>
+        <li ui-sref="tab.mine">
+          <a href="javascript:;">
+            <img ng-src="img/home/nav3.png" alt="">
+            <h4>我的微购</h4>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <img ng-src="img/home/nav4.png" alt="">
+            <h4>充值</h4>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <img ng-src="img/home/nav5.png" alt="">
+            <h4>领券中心</h4>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <img ng-src="img/home/nav6.png" alt="">
+            <h4>生活团购</h4>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <img src="img/home/nav7.png" alt="">
+            <h4>我的关注</h4>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- 头条资讯 -->
+    <section class="headline-info row">
+      <div class="col col-20">
+        <span class="title">头条<br>资讯</span>
+      </div>
+      <div class="swiper-container col" id="infoSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="javascript:;">即食熟燕麦片 1080g 买一送一</a></div>
+          <div class="swiper-slide"><a href="javascript:;">秋冬保暖女款外套修身显瘦 限时包邮</a></div>
+          <div class="swiper-slide"><a href="javascript:;">2016潮流男款运动鞋 最低3.5折</a></div>
+        </div>
+      </div>
+      <div class="more"><a href="javascript:;">更多>></a></div>
+    </section>
+    <!-- 广告轮播（一）-->
+    <section class="home-ad">
+      <div class="swiper-container" id="adSwiper1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="javascript:;">
+              <img src="img/home/home-ad-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:;">
+              <img src="img/home/home-ad-2.jpg" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:;">
+              <img src="img/home/home-ad-3.jpg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination pagination-position"></div>
+      </div>
+    </section>
+    <!-- 掌上秒杀 -->
+    <section class="secKill">
+      <div class="row">
+        <span class="col col-30 title"><i></i>&nbsp;掌上秒杀</span>
+        <span class="col col-50"><i>05</i>:<i>34</i>:<i>54</i></span>
+        <a href="javascript:;" class="col col-20 more"><span>更多>></span></a>
+      </div>
+      <ul class="clearfix">
+        <li>
+          <a href="javascript:;">
+            <img src="img/home/seckill.jpg">
+            <span class="goods-describe">2016秋冬棉服修身保暖女款限时包邮</span>
+            <span class="shop-price">￥11.99</span>
+            <span class="mark-price">￥19.90</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <img src="img/home/seckill.jpg">
+            <span class="goods-describe">2016秋冬棉服修身保暖女款限时包邮</span>
+            <span class="shop-price">￥11.99</span>
+            <span class="mark-price">￥19.90</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <img src="img/home/seckill.jpg">
+            <span class="goods-describe">2016秋冬棉服修身保暖女款限时包邮</span>
+            <span class="shop-price">￥11.99</span>
+            <span class="mark-price">￥19.90</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- 主题街 -->
+    <section class="theme-street clearfix">
+      <p class="title">主题街</p>
+      <div class="left-item">
+        <img src="img/home/home-theme-3.jpg">
+      </div>
+      <div class="right-item">
+        <img src="img/home/home-theme-1.jpg">
+      </div>
+      <div class="right-item">
+        <img src="img/home/home-theme-2.jpg">
+      </div>
+    </section>
+    <!-- 广告轮播（二）-->
+    <section class="home-ad">
+      <div class="swiper-container" id="adSwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="javascript:;">
+              <img src="img/home/home-ad-4.jpg" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:;">
+              <img src="img/home/home-ad-5.jpg" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:;">
+              <img src="img/home/home-ad-6.jpg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination pagination-position"></div>
+      </div>
+    </section>
+    <!-- 超值购 -->
+    <section class="cheap-shop clearfix">
+      <p class="title">超值购</p>
+      <div class="left-item">
+        <img src="img/home/cp1.jpg">
+      </div>
+      <div class="right-item">
+        <img src="img/home/cp2.jpg">
+      </div>
+      <div class="right-item">
+        <img src="img/home/cp3.jpg">
+      </div>
+    </section>
+    <!-- 回到顶部按钮 -->
+    <div class="back-top"></div>
+  </ion-content>
+</ion-view>

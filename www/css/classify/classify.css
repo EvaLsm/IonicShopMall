@@ -1,0 +1,123 @@
+/*==============
+  *  分类页面样式
+     =============*/
+/*样式初始化*/
+#classify {
+  background-image: none;
+  background-color: #fff;
+}
+
+#classify div, ul, li, h1, h2, h3, img, a {
+  font-family: '微软雅黑';
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  color: #666;
+  font-weight: 300;
+}
+
+#classify a, #classify span {
+  display: block;
+  text-decoration: none;
+}
+
+#classify body {
+  overflow: hidden;
+}
+
+/*左侧导航样式*/
+#classify #nav {
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  width: 90px;
+  overflow: hidden;
+}
+
+#classify #nav ul {
+  display: block;
+  width: 100px;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#classify #nav ul li {
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  line-height: 50px;
+  width: 90px;
+  height: 50px;
+}
+
+#classify #nav .nav-blur {
+  color: #222;
+  font-size: 15px;
+  border-right: 1px solid #e0e0e0;
+  background-color: #f9f2f4;
+}
+
+#classify #nav .nav-current {
+  color: red;
+  font-size: 15px;
+  border-right: 1px solid #fff;
+  background-color: #fff;
+}
+
+/*右侧商品分类列表的样式*/
+#classify #pro {
+  position: absolute;
+  left: 90px;
+  top: 45px;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#classify .pro-scroll {
+  width: 200%;
+  height: 100%;
+}
+
+#classify .pro-warp {
+  width: 50%;
+  background-color: #fff;
+}
+
+#classify #pro .banner {
+  margin: 10px 12px;
+}
+
+#classify #pro img {
+  width: 100%;
+}
+
+#classify #pro .content {
+  overflow: hidden;
+}
+
+#classify #pro .content-title {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 10px;
+  font-family: '微软雅黑';
+}
+
+#classify #pro .content-body {
+  margin: 0px 12px;
+  overflow: hidden;
+}
+
+#classify #pro .content-body-list {
+  width: 33%;
+  margin-top: 10px;
+  float: left;
+}
+
+#classify #pro .content-body-list span {
+  font-size: 14px;
+  text-align: center;
+  font-family: '微软雅黑';
+}

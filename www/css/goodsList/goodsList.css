@@ -1,0 +1,64 @@
+/*===========
+  *  商品列表样式
+    ============*/
+/*头部搜索框样式*/
+#goodsList .bar-header .item-input-wrapper {
+  margin: 0 0 0 10px;
+}
+
+/*头部导航条样式*/
+#goodsList #nav .nav-all {
+  background: #FFFFFF;
+  height: 30px;
+  width: 20%;
+  color: #d9534f;
+  text-align: center;
+  font-size: 20px;
+  float: left;
+  line-height: 30px;
+}
+
+#goodsList #nav .nav-warp ul li {
+  float: left;
+  border-left: solid 1px #f3f3f3;
+  height: 30px;
+  width: 58px;
+  text-align: center;
+  line-height: 30px;
+}
+
+/*商品样式*/
+#goodsList .scroll-content .goodsLi {
+  margin: 20px 0;
+  border-bottom: solid 1px #f3f3f3;
+  padding: 5px;
+}
+
+#goodsList .scroll-content .goodsLi img {
+  float: left;
+  margin: 0 10px;
+  width: 30%;
+}
+
+#goodsList .scroll-content .goodsLi .describe {
+  display: inline-block;
+  width: 200px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  font-size: 14px;
+  -webkit-box-orient: vertical;
+  color: #222222;
+  -webkit-line-clamp: 2;
+}
+
+#goodsList .scroll-content .goodsLi span {
+  color: #cf2d28;
+  font-size: 15px;
+}
+
+/*没有数据出现的提示信息的样式*/
+#goodsList .goods-content .no-data-remind {
+  text-align: center;
+}

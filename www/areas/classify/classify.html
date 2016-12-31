@@ -1,0 +1,54 @@
+<ion-view id="classify" view-title="分类" hide-back-button="true" cache-view="false">
+  <ion-content class="scroll-content" scroll="false">
+    <!-- 头部搜索框 -->
+    <header class="bar bar-header bar-assertive item-input-inset">
+      <div class="item-input-wrapper light-bg">
+        <input type="text">
+      </div>
+      <button class="button button-clear">
+        <i class="icon ion-ios-search-strong"></i>
+      </button>
+    </header>
+    <!-- 左侧导航条 -->
+    <nav id="nav">
+      <ul>
+        <li ng-class="$index==0?'nav-current':'nav-blur'" ng-repeat="item in categoryData"
+            ng-click="categoryLeftClick($event);getCategoryDetailData(item.typeNumber)">{{item.name}}
+        </li>
+      </ul>
+    </nav>
+    <!-- 右侧商品分类列表 -->
+    <div id="pro">
+      <ion-content lazy-scroll>
+        <div class="pro-scroll">
+          <div class="pro-warp">
+            <div class="banner">
+              <img ng-src="img/classify/banner_1.jpg">
+            </div>
+            <div class="content">
+              <div class="content-title">
+                <span>热卖品类</span>
+              </div>
+              <div class="content-body">
+                <li class="content-body-list" ng-repeat="item in categoryDetailData"
+                    ui-sref="goodsList({typeNumber:{{item.typeNumber}}})">
+                  <img image-lazy-src="{{item.src}}" alt="" image-lazy-loader="lines">
+                  <span>{{item.name}}</span>
+                </li>
+              </div>
+              <div class="content-title">
+                <span>冬季新品</span>
+              </div>
+              <div class="content-body">
+                <li class="content-body-list" ng-repeat="item in categoryDetailData">
+                  <img image-lazy-src="{{item.src}}" image-lazy-loader="lines">
+                  <span>{{item.name}}</span>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-content>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,46 @@
+<ion-view id="goodsList" view-title="商品列表页" hide-back-button="true" cache-view="false">
+  <!-- 头部搜索部分 -->
+  <header class="bar bar-header bar-assertive item-input-inset">
+    <a class="button icon ion-ios-arrow-back button-clear" ui-sref="tab.classify"></a>
+    <div class="item-input-wrapper light-bg">
+      <input type="text">
+    </div>
+    <button class="button button-clear">
+      <i class="icon ion-ios-search-strong"></i>
+    </button>
+  </header>
+  <!-- 筛选导航部分 -->
+  <nav id="nav" class="row bar-subheader">
+    <div class="nav-all">综合</div>
+    <div class="nav-warp">
+      <ul>
+        <li>销量</li>
+        <li>价格</li>
+        <li>品牌</li>
+        <li>新品</li>
+        <li>服务</li>
+      </ul>
+    </div>
+  </nav>
+  <!-- 具体商品列表部分 -->
+  <ion-content class="scroll-content has-header has-subheader goods-content">
+    <ion-refresher pulling-text="松开刷新..." refreshing-text="正在刷新" on-refresh="func_refreshGoodsList()">
+    </ion-refresher>
+    <ul>
+      <li class="goodsLi clearfix" ng-repeat="obj in obj_goodsListData">
+        <a href="#">
+          <img src="{{imgDomain}}{{obj.goodsImg}}" alt="">
+          <p class="describe">{{obj.goodsName}}</p>
+          <span class="price">¥{{obj.shopPrice}}.00</span>
+        </a>
+      </li>
+    </ul>
+    <!--没有更多数据时的用户提示-->
+    <div ng-hide="isMoredata" class="no-data-remind">
+      <span>我去，地主家也没有余粮啊！</span>
+    </div>
+    <ion-infinite-scroll ng-if="isMoredata" on-infinite="func_loadMoreGoodsList()" distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
+
