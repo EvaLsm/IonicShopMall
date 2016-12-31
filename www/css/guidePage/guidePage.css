@@ -11,13 +11,12 @@
 }
 #guidePage .swiper-container .swiper-wrapper .img-three {
   background: url("../../img/guidePage/guidePage1.jpg") no-repeat;
-  background-size: 100% 800px;
+  background-size: 100% 850px;
 }
 
 #guidePage .swiper-container .swiper-wrapper .slide-img .logo-img {
   background: url("../../img/guidePage/logo.png") no-repeat;
   background-size: 100px 100px;
-  opacity: 0.5;
   width: 100px;
   height: 100px;
   margin: 20px auto;
@@ -25,7 +24,7 @@
 
 #guidePage .swiper-container .swiper-wrapper .slide-img .text {
   width: 100%;
-  margin: 150px auto;
+  margin: 100px auto;
 }
 
 #guidePage .swiper-container .swiper-wrapper .slide-img .text h2 {
@@ -36,5 +35,5 @@
 #guidePage .swiper-container .swiper-wrapper .slide-img .button {
   display: inline-block;
   width: 50%;
-  margin: 130px 100px;
+  margin: 240px 100px;
 }
